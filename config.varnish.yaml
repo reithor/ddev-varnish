@@ -1,3 +1,0 @@
-hooks:
-  post-start:
-    - exec-host: ddev ibexa-syncvcl
