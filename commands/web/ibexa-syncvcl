@@ -18,8 +18,7 @@ else
     elif [[ "$DXP_RELEASE" =~ ^(~|v)?5\.0\. ]]; then
         DXP_VERSION="5"
     fi
-fi
-
+fi 
 
 if [[ $VARNISH_VERSION != "7" && $VARNISH_VERSION  !=  "6"  ]]; then
   echo "❗️ No valid varnish version "
@@ -34,7 +33,7 @@ fi
 
 PATH_VCL="vendor/ibexa/http-cache/docs/varnish/vcl/varnish$VARNISH_VERSION.vcl"
 if [ ! -f $PATH_VCL ]; then
-    PATH_VCL="varnish/v$DXP_VERSION/varnish$VARNISH_VERSION.vcl"
+    PATH_VCL=".ddev/varnish/v$DXP_VERSION/varnish$VARNISH_VERSION.vcl"
 fi
 
 if [ ! -f $PATH_VCL ]; then
